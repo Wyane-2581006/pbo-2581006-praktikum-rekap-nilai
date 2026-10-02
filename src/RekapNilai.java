@@ -56,5 +56,10 @@ public class RekapNilai {
             nomor++;
 
         } while (true);
+
+        if (jumlah_Nilai > 0) {
+            double rata = total / jumlah_Nilai;
+            System.out.println("Rata-rata : " + String.format("%.2f", rata));
+        }
     }
 }
