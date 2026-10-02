@@ -11,7 +11,8 @@ public class RekapNilai {
         double total = 0; //harus dimulai dari 0 karena digunakan sebagai akumulator
         int nomor = 1; //harus dimulai dari 1 karena digunakan sebagai akumulator, dan 1 sebagai penanda
         int jumlah_Nilai = 0; // harus dimulai dari 0 karena digunakan sebagai akumulator
-
+        System.out.println("==== REKAP NILAI KELAS ====");
+        System.out.println("Ketik -1 Ketika Sudah Selesai");
         do {// do-while digunakan karena nilai pertama harus diminta terlebih dahulu sebelum kondisi diperiksa.
             System.out.print("Masukkan nilai ke- " + nomor + " : ");
             nilai = scanner.nextInt();
@@ -58,6 +59,9 @@ public class RekapNilai {
         } while (true);
 
         if (jumlah_Nilai > 0) {
+
+            System.out.println("\nNilai Sah : " + jumlah_Nilai);
+
             double rata = total / jumlah_Nilai;
             System.out.println("Rata-rata : " + String.format("%.2f", rata));
 
