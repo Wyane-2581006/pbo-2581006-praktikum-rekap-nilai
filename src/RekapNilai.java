@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 public class RekapNilai {
 
@@ -63,7 +64,7 @@ public class RekapNilai {
             System.out.println("\nNilai Sah : " + jumlah_Nilai);
 
             double rata = total / jumlah_Nilai;
-            System.out.println("Rata-rata : " + String.format("%.2f", rata));
+            System.out.println("Rata-rata : " + String.format(new Locale("id", "ID"), "%.2f", rata));
 
             String status = rata >= 60 ? "LULUS" : "TIDAK LULUS";// ternary untuk memilih kondisi mana yang dijalankan dengan bentuk kondisi ? nilaiJikaBenar : nilaiJikaSalah
             System.out.println("Status : " + status);
