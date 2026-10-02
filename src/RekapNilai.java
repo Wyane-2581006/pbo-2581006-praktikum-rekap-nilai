@@ -60,6 +60,9 @@ public class RekapNilai {
         if (jumlah_Nilai > 0) {
             double rata = total / jumlah_Nilai;
             System.out.println("Rata-rata : " + String.format("%.2f", rata));
+
+            String status = rata >= 60 ? "LULUS" : "TIDAK LULUS";
+            System.out.println("Status : " + status);
         }
     }
 }
