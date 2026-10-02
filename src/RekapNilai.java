@@ -42,7 +42,16 @@ public class RekapNilai {
                 grade = 'E';
             }
 
+            String keterangan_Nilai = switch (grade){
+                case 'A' -> "Sangat Baik";
+                case 'B' -> "Baik";
+                case 'C' -> "Cukup";
+                case 'D' -> "Kurang";
+                default -> "Tidak Lulus";
+            };
+
             System.out.println("Grade: " + grade);
+            System.out.println("Keterangan: " + keterangan_Nilai);
 
             nomor++;
 
