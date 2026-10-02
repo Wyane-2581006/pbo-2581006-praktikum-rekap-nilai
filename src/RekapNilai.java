@@ -23,6 +23,27 @@ public class RekapNilai {
                 continue;
             }
 
+            char grade;
+            // Jika nilai >= 60 diletakkan paling atas, nilai 85 langsung mendapat grade D
+            // karena kondisi pertama sudah bernilai true dan kondisi berikutnya tidak diperiksa.
+            if (nilai>=90){
+                grade = 'A';
+            }
+            else if (nilai>=80){
+                grade = 'B';
+            }
+            else if (nilai>=70){
+                grade = 'C';
+            }
+            else if (nilai>=60){
+                grade = 'D';
+            }
+            else{
+                grade = 'E';
+            }
+
+            System.out.println("Grade: " + grade);
+
             nomor++;
 
         } while(true);
