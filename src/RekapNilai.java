@@ -8,9 +8,9 @@ public class RekapNilai {
         Scanner scanner = new Scanner(System.in);
 
         int nilai;
-        double total = 0;
-        int nomor = 1;
-        int jumlah_Nilai = 0;
+        double total = 0; //harus dimulai dari 0 karena digunakan sebagai akumulator
+        int nomor = 1; //harus dimulai dari 1 karena digunakan sebagai akumulator, dan 1 sebagai penanda
+        int jumlah_Nilai = 0; // harus dimulai dari 0 karena digunakan sebagai akumulator
 
         do {// do-while digunakan karena nilai pertama harus diminta terlebih dahulu sebelum kondisi diperiksa.
             System.out.print("Masukkan nilai ke- " + nomor + " : ");
@@ -25,7 +25,7 @@ public class RekapNilai {
             }
 
             char grade;
-            // Jika nilai >= 60 diletakkan paling atas, nilai 85 langsung mendapat grade D
+            // Pecobaan : Jika nilai >= 60 diletakkan paling atas, nilai 85 langsung mendapat grade D
             // karena kondisi pertama sudah bernilai true dan kondisi berikutnya tidak diperiksa.
             if (nilai >= 90) {
                 grade = 'A';
@@ -61,7 +61,7 @@ public class RekapNilai {
             double rata = total / jumlah_Nilai;
             System.out.println("Rata-rata : " + String.format("%.2f", rata));
 
-            String status = rata >= 60 ? "LULUS" : "TIDAK LULUS";
+            String status = rata >= 60 ? "LULUS" : "TIDAK LULUS";// ternary untuk memilih kondisi mana yang dijalankan dengan bentuk kondisi ? nilaiJikaBenar : nilaiJikaSalah
             System.out.println("Status : " + status);
         }
     }
