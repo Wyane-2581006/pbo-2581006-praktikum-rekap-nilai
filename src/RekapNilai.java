@@ -9,16 +9,22 @@ public class RekapNilai {
 
         int nilai;
         double total;
+        int nomor = 1;
 
-        do{
-            System.out.print("Masukkan nilai: ");
+        do{// do-while digunakan karena nilai pertama harus diminta terlebih dahulu sebelum kondisi diperiksa.
+            System.out.print("Masukkan nilai ke- " + nomor + " : ");
             nilai = scanner.nextInt();
-        } while(nilai != SELESAI);
 
-        if(nilai<0 || nilai >100){
-            System.out.println("Nilai Tidak Valid.");
-            continue;
-        }
+            if(nilai==SELESAI){
+                break;
+            }
+            if(nilai<0 || nilai >100) {
+                System.out.println("Nilai Tidak Valid.");
+                continue;
+            }
 
+            nomor++;
+
+        } while(true);
     }
 }
